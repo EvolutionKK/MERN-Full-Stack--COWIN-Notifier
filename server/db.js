@@ -1,6 +1,5 @@
 const express = require("express");
 const mysql = require("mysql");
-const cors = require("cors");
 
 const app = express();
 
@@ -20,16 +19,7 @@ app.post("/login", (req, res) => {
     const password = req.body.password;
     let age = req.body.age;
     let pin = req.body.pin;
-    //  user.findOne({email:email}, (err, user) => {
-    //      if(user){
-    //          res.send({message: "User already registered"})
-    //      }else {
-    //          const user = new User({
-    //              email,
-    //              password
-    //          })
-    //      }
-    //  })
+
     let fs = require("fs");
 let puppeteer = require("puppeteer");
 // age = parseInt(age);

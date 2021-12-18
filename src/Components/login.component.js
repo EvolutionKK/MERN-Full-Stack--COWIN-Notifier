@@ -18,7 +18,7 @@ function Login() {
     const handleSubmit = async(e)=>{
         console.log('hi');
         e.preventDefault();
-        let obj = {"email":email,"password":password,"age": age,"pin": pin};
+        let obj = {"email":email,"password":password};
         try {
           console.log('Logging in user')
           setLoading(true)
@@ -30,8 +30,6 @@ function Login() {
             body: JSON.stringify({
                 "email":email,
                 "password":password,
-                "age": age,
-                "pin":pin
             })
           })
           .then( res => res.json())
@@ -39,10 +37,9 @@ function Login() {
               if(data.error){
                    M.toast({html: data.error, classes:"#c62828 red darken-2"})
               }else{
-                        M.toast({html:"Email Notifier Enabled"});
+                        M.toast({html:"OPENNNNNN"});
                         history.push({
                             pathname:'/',
-                            state:{age:age,pin:pin}
                         })
                     }
           })
